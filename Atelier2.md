@@ -25,8 +25,16 @@ Les stratégies de groupe sont gérées à travers des objets de stratégie de g
 Les stratégies de mots de passe affinées correspondent à des objets « Paramètres de mots de passe » et sont également appelées « PSO » pour « Password Settings Object ».
 
 
-### Groupes locaux
+## Groupes locaux
 Les groupes locaux sont vraiment locaux. Ils sont définis et disponibles uniquement pour l’ordinateur spécifique sur lequel ils ont été créés. Ne créez pas de nouveaux groupes locaux sur les postes de travail ; dans la plupart des cas, les seuls groupes locaux qu’il faut gérer sont les groupes d’utilisateurs et d’administrateurs.
+
+### Pour créer : 
+- On se co sur une de machine
+- Sur server manager on clique sur "tools" --> "Computer Management"
+- ensuite on clique sur Local Users and Groups
+- Puis groupe
+- Clique droit "new group"
+- puis add des users
 
 
 ### Groupes du domaines
