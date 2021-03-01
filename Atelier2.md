@@ -46,3 +46,11 @@ Les groupes universels d’Active Directory sont utiles dans les forêts multi-d
 
 ### Groupes globaux
 Les groupes globaux servent principalement à définir des collections d’objets de domaine (utilisateurs, autres groupes globaux et ordinateurs) en fonction des rôles métier, ce qui signifie qu’ils servent principalement de groupes de rôles. Les groupes d’utilisateurs basés sur des rôles (par exemple, « RH » ou « Marketing ») et les groupes d’ordinateurs basés sur des rôles (par exemple, « Postes de travail marketing ») sont généralement des groupes globaux
+
+
+### Désactiver l'héritage des droits.
+- Clique droit sur le dossier
+- Propriété
+- Securité
+- Avancé
+- -Disable inheritance
