@@ -1,99 +1,38 @@
+# Atelier 1 Déploiement Windows Serveur
+
+## Définition
+
+### AD
+Active Directory est un service d'annuaire créé par Microsoft en 1996 et destiné à être installé sur les Windows Server 2000, 2003, 2008, 2012 et 2016.
+En stockant dans une base de données les renseignements relatifs aux ressources réseau d'un domaine, Active Directory a pour objectif premier de centraliser 
+l'identification et l'authentification d'un réseau de postes Windows. Ses fonctions additionnelles permettent aux administrateurs de gérer efficacement une stratégie de 
+groupe, ainsi que l'installation des logiciels et des mises à jour sur les stations du réseau.
 
 
+### Serveur autonome
+Un ordinateur qui exécute Windows Server, mais ne participe pas à un domaine. 
+Un serveur autonome a seulement sa propre base de données des utilisateurs finaux, et il traite les demandes d'ouverture de session par lui-même. 
+Il ne partage pas les informations de compte avec n'importe quel autre ordinateur et ne peut pas fournir l'accès aux comptes de domaine.
 
-### Approche systémique 
-Approche avec une vue global.
+### Contrôleur de domaine
+Un contrôleur de domaine est un serveur qui répond aux demandes d’authentification et contrôle les utilisateurs des réseaux informatiques.
+Les domaines eux, sont un moyen hiérarchique d’organiser les utilisateurs et ordinateurs travaillant de concert sur le même réseau.
+Le contrôleur de domaine permet donc d’organiser et de sécuriser toutes les données.
 
-### Définition d’un système
-« Ensemble d’éléments en interaction dynamique,
-organisé en vue d’atteindre un but commun » Joël
-De Rosnay «Le macroscope », éditions du seuil,
-1975
-
-### L'entreprise comme système:
-- Système de pilotage 
-Décide et contrôle
-
-- Système d'information
-Mémorise, traite et diffuse
-
--Système Opérant
-Transforme et produit
-
-## Exercice
-### Diapo 50 EX1
-(10^2)*(10^3)=100000
-Code articulé
-Code séquentielle
+Le contrôleur de domaine (DC) est le coffret qui contient les clefs du royaume : l’Active Directory (AD). 
+Si les hackers disposent de toutes sortes d’astuces pour élever leurs droits d’accès sur les réseaux et attaquer le DC lui-même, 
+vous pouvez non seulement protéger vos DC contre les hackers mais également les utiliser pour détecter les cyberattaques en cours.
 
 
-
-### Les clés de contrôle modulo 23
-Clé= lettre correspondant au rang donné par Code
-modulo 23 + 1 (I, O, S exclus pour ne pas confondre
-avec 1, 0, 5)
-• Exemple: 159357 Modulo 23 = 13 ;
-Alphabet(13+1) = « P »;
-donc le code avec sa clé est 159357P
-• Inconvénient: domaine des restes restreint, donc
-plusieurs codes peuvent avoir la même clé.
+### Serveur Membre 
+Un Serveur membre est un serveur qui est configuré dans un environnment réseau déjà piloté par un ou deux Controleurs de Domaine (PDC et BDC).
+Donc le Serveur membre est juste utilisé pour le système d'exploitation
 
 
-### Clé de contrôle modulo 97
-Clé= code MODULO 97
-• Exemple : 159357 Modulo 97 = 83
-donc le code avec sa clé est 15935783
-• Inconvénient: clé sur deux caractères pouvant être
-eux-mêmes sources d'erreur
-
-### Clé de contrôle complément à 9
-• clé= complément à 9 de chaque position du code.
-• Exemple: code= 159357
-Son complément à 9 est 840642 ; le code avec sa clé
-est 159357 840642
-• Inconvénient: bien qu'étant une méthode sûre
-(bijection entre les codes et les clés), ce procédé
-conduit à doubler la longueur du code.
+### Forêt
+Une forêt Active Directory (forêt AD) représente le plus haut niveau de conteneur logique dans une configuration Active Directory contenant des domaines, 
+utilisateurs, ordinateurs et règles de groupe.
 
 
-
-### Clé de contrôle modulo 9
-• Clé= (somme des chiffres du code) MODULO 9.
-• Exemple: code= 159357
-Somme des chiffres = 1+5+9+3+5+7= 30
-30 Modulo 9 = 3 ;
-• Donc code avec sa clé est 1593573
-• Inconvénient: ne détecte pas les erreurs d'inversion
-de deux chiffres.
-
-
-### Exo Diapo 68 
-[TypeDuDoc](1,2ou3) [Spé](CH ou SN) [SousSpé](1à5 et 1à9) [NumSéquentiel](AutoIncrement) 
-CléControleModulo9
-
-## Développement de systèmes d’information
-### Quatre étapes incontournables
-• La phase d'analyse des besoins: la formalisation des
-besoins du le client et de l'ensemble des contraintes,
-puis l'estimation de la faisabilité de ces besoins (un
-cahier des charges)
-• La phase de conception: fournir une description
-fonctionnelle du système, avoir un modèle du système
-• La phase de réalisation: c'est la traduction dans un
-langage de programmation des fonctionnalités définies
-lors de phases de conception
-• La phase de mise place et maintenance: c'est le
-déploiement sur site du SI, maintenance corrective et
-évolutive 
-
-• Le cycle de vie est la description d’un processus qui
-couvre les phases de création, de distribution sur le
-marché et de la disparition d’un produit (SI,
-logiciel,…)
-• Le but d’un tel découpage est de :
-• Maitriser les risques
-• Maitriser au mieux le délai et les coûts
-• Obtenir une qualité conforme aux besoins
-
-
-
+### Groupe de travail
+Un groupe de travail est un regroupement d'ordinateurs d'un réseau local, conçu pour aider les utilisateurs à trouver des ressources partagées à l'intérieur de ce groupe.
